@@ -110,7 +110,7 @@ with gr.Blocks(theme=gr.themes.Soft(), css=CSS, title="Pocket-Agent") as demo:
     gr.Markdown(
         """
         ---
-        *Pocket-Agent • Qwen2.5-0.5B fine-tuned with QLoRA • GGUF Q4_K_M quantized • CPU inference via llama.cpp*
+        *Pocket-Agent • SmolLM2-360M fine-tuned with LoRA • GGUF Q4_K_M quantized • CPU inference via llama.cpp*
         """
     )
 

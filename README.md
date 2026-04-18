@@ -49,19 +49,12 @@ pocket-agent/
 
 | Property | Value |
 |----------|-------|
-| **Base Model** | Qwen2.5-0.5B-Instruct |
-| **Fine-tuning** | QLoRA (r=16, alpha=32, 1.75% trainable) |
-| **Training Data** | ~255 template-generated examples |
-| **Quantization** | GGUF Q4_K_M |
-| **Model Size** | ~350 MB (passes ≤500MB gate) |
-| **Inference** | llama-cpp-python, CPU-only |
-
-### Alternative Small Model
-
-| Property | Value |
-|----------|-------|
 | **Base Model** | SmolLM2-360M-Instruct |
-| **Model Size** | ~200 MB (qualifies for ≤250MB bonus) |
+| **Fine-tuning** | LoRA (fp16, r=16, alpha=32, 2.34% trainable) |
+| **Training Data** | ~255 high-quality examples |
+| **Quantization** | GGUF Q4_K_M |
+| **Model Size** | ~200 MB (qualifies for ≤250MB bonus point gate!) |
+| **Inference** | llama-cpp-python, CPU-only |
 
 ## 🚀 Quick Start
 
@@ -149,11 +142,11 @@ response = inference.run("What about Paris?", history)
 
 ## 📝 Design Decisions
 
-1. **Qwen2.5-0.5B**: Chosen for strong instruction-following and JSON output at small size
-2. **Q4_K_M quantization**: Best accuracy-to-size ratio at ~350MB
+1. **SmolLM2-360M-Instruct**: Chosen to aggressively target the ≤250MB bonus point threshold.
+2. **Q4_K_M quantization**: Best accuracy-to-size ratio, yielding a ~200MB final model.
 3. **Template data**: Ensures consistent tool-call format and high signal-to-noise
 4. **18% refusal ratio**: Prevents costly false-positive tool calls (-0.5 each)
-5. **ChatML format**: Native to Qwen, no format conversion needed
+5. **Direct fp16 LoRA**: Bypassed QLoRA/bitsandbytes to avoid Colab CUDA version conflicts and streamline training.
 
 ## 🐛 Error Analysis
 
