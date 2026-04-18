@@ -20,7 +20,11 @@ from llama_cpp import Llama
 # =====================================================================
 # Model Configuration
 # =====================================================================
-MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models", "pocket-agent.gguf")
+try:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+except NameError:
+    BASE_DIR = os.getcwd()
+MODEL_PATH = os.path.join(BASE_DIR, "models", "pocket-agent.gguf")
 
 SYSTEM_PROMPT = (
     "You are a helpful mobile assistant. You have access to the following tools: "

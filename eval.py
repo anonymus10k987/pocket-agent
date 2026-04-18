@@ -13,7 +13,10 @@ import time
 import re
 
 # Add project root to path
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+except NameError:
+    sys.path.insert(0, os.getcwd())
 
 
 def parse_tool_call(response: str) -> dict | None:
