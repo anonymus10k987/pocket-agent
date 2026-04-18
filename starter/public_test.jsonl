@@ -1,0 +1,40 @@
+{"prompt": "What's the weather in Tokyo?", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "Tokyo", "unit": "C"}}, "slice": "A"}
+{"prompt": "Show me the temperature in Chicago in Fahrenheit", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "Chicago", "unit": "F"}}, "slice": "A"}
+{"prompt": "Create a meeting called 'Sprint Review' on 2025-05-10", "history": [], "expected": {"should_refuse": false, "tool": "calendar", "args": {"action": "create", "date": "2025-05-10", "title": "Sprint Review"}}, "slice": "A"}
+{"prompt": "What events do I have on 2025-07-04?", "history": [], "expected": {"should_refuse": false, "tool": "calendar", "args": {"action": "list", "date": "2025-07-04"}}, "slice": "A"}
+{"prompt": "Convert 15 pounds to kilograms", "history": [], "expected": {"should_refuse": false, "tool": "convert", "args": {"value": 15, "from_unit": "pounds", "to_unit": "kilograms"}}, "slice": "A"}
+{"prompt": "How much is 200 EUR in JPY?", "history": [], "expected": {"should_refuse": false, "tool": "currency", "args": {"amount": 200, "from": "EUR", "to": "JPY"}}, "slice": "A"}
+{"prompt": "Get all employees from the staff table where department is Engineering", "history": [], "expected": {"should_refuse": false, "tool": "sql", "args": {"query": "SELECT * FROM staff WHERE department = 'Engineering'"}}, "slice": "A"}
+{"prompt": "Convert 30 centimeters to inches", "history": [], "expected": {"should_refuse": false, "tool": "convert", "args": {"value": 30, "from_unit": "centimeters", "to_unit": "inches"}}, "slice": "A"}
+{"prompt": "Could you tell me how warm it is in Sydney right now?", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "Sydney", "unit": "C"}}, "slice": "B"}
+{"prompt": "I need to know 50 bucks in euros", "history": [], "expected": {"should_refuse": false, "tool": "currency", "args": {"amount": 50, "from": "USD", "to": "EUR"}}, "slice": "B"}
+{"prompt": "Pop a new event on my schedule: 'Gym' for 2025-09-01", "history": [], "expected": {"should_refuse": false, "tool": "calendar", "args": {"action": "create", "date": "2025-09-01", "title": "Gym"}}, "slice": "B"}
+{"prompt": "What's 2.5 hours in minutes?", "history": [], "expected": {"should_refuse": false, "tool": "convert", "args": {"value": 2.5, "from_unit": "hours", "to_unit": "minutes"}}, "slice": "B"}
+{"prompt": "Pull up the revenue numbers from the sales table", "history": [], "expected": {"should_refuse": false, "tool": "sql", "args": {"query": "SELECT * FROM sales"}}, "slice": "B"}
+{"prompt": "Lahore mein aaj ka mausam kya hai?", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "Lahore", "unit": "C"}}, "slice": "C"}
+{"prompt": "Convierte 75 dólares a pesos mexicanos", "history": [], "expected": {"should_refuse": false, "tool": "currency", "args": {"amount": 75, "from": "USD", "to": "MXN"}}, "slice": "C"}
+{"prompt": "Londn weather plz", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "London", "unit": "C"}}, "slice": "C"}
+{"prompt": "كم يساوي 1000 ريال سعودي بالدولار؟", "history": [], "expected": {"should_refuse": false, "tool": "currency", "args": {"amount": 1000, "from": "SAR", "to": "USD"}}, "slice": "C"}
+{"prompt": "दिल्ली का तापमान बताओ", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "Delhi", "unit": "C"}}, "slice": "C"}
+{"prompt": "Book me a flight to Paris", "history": [], "expected": {"should_refuse": true, "tool": null, "args": null}, "slice": "D"}
+{"prompt": "Convert that to euros", "history": [], "expected": {"should_refuse": true, "tool": null, "args": null}, "slice": "D"}
+{"prompt": "What's the meaning of life?", "history": [], "expected": {"should_refuse": true, "tool": null, "args": null}, "slice": "A"}
+{"prompt": "Convert 100 km to miles", "history": [], "expected": {"should_refuse": false, "tool": "convert", "args": {"value": 100, "from_unit": "km", "to_unit": "miles"}}, "slice": "A"}
+{"prompt": "Exchange 3000 KRW to CAD", "history": [], "expected": {"should_refuse": false, "tool": "currency", "args": {"amount": 3000, "from": "KRW", "to": "CAD"}}, "slice": "A"}
+{"prompt": "Add 'Doctor Visit' to my calendar on 2025-08-20", "history": [], "expected": {"should_refuse": false, "tool": "calendar", "args": {"action": "create", "date": "2025-08-20", "title": "Doctor Visit"}}, "slice": "A"}
+{"prompt": "Find all orders placed after January 2025", "history": [], "expected": {"should_refuse": false, "tool": "sql", "args": {"query": "SELECT * FROM orders WHERE order_date > '2025-01-01'"}}, "slice": "B"}
+{"prompt": "Istanbul hava durumu nasıl?", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "Istanbul", "unit": "C"}}, "slice": "C"}
+{"prompt": "Play some music for me", "history": [], "expected": {"should_refuse": true, "tool": null, "args": null}, "slice": "D"}
+{"prompt": "How much is 1500 THB in SGD?", "history": [], "expected": {"should_refuse": false, "tool": "currency", "args": {"amount": 1500, "from": "THB", "to": "SGD"}}, "slice": "A"}
+{"prompt": "Convert 98.6 fahrenheit to celsius", "history": [], "expected": {"should_refuse": false, "tool": "convert", "args": {"value": 98.6, "from_unit": "fahrenheit", "to_unit": "celsius"}}, "slice": "A"}
+{"prompt": "What do I have planned for 2025-02-14?", "history": [], "expected": {"should_refuse": false, "tool": "calendar", "args": {"action": "list", "date": "2025-02-14"}}, "slice": "B"}
+{"prompt": "Show the average salary from the employees table", "history": [], "expected": {"should_refuse": false, "tool": "sql", "args": {"query": "SELECT AVG(salary) FROM employees"}}, "slice": "A"}
+{"prompt": "Mujhe karachi ka weather batao", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "Karachi", "unit": "C"}}, "slice": "C"}
+{"prompt": "Cuántos euros son 200 libras?", "history": [], "expected": {"should_refuse": false, "tool": "currency", "args": {"amount": 200, "from": "GBP", "to": "EUR"}}, "slice": "C"}
+{"prompt": "Who won the cricket match yesterday?", "history": [], "expected": {"should_refuse": true, "tool": null, "args": null}, "slice": "D"}
+{"prompt": "Convert 1 mile to meters plsss", "history": [], "expected": {"should_refuse": false, "tool": "convert", "args": {"value": 1, "from_unit": "mile", "to_unit": "meters"}}, "slice": "C"}
+{"prompt": "Weather in San Francisco", "history": [], "expected": {"should_refuse": false, "tool": "weather", "args": {"location": "San Francisco", "unit": "C"}}, "slice": "A"}
+{"prompt": "Convert 500 ml to cups", "history": [], "expected": {"should_refuse": false, "tool": "convert", "args": {"value": 500, "from_unit": "ml", "to_unit": "cups"}}, "slice": "A"}
+{"prompt": "How much AED is 100 dollars?", "history": [], "expected": {"should_refuse": false, "tool": "currency", "args": {"amount": 100, "from": "USD", "to": "AED"}}, "slice": "B"}
+{"prompt": "Delete all records from the users table", "history": [], "expected": {"should_refuse": false, "tool": "sql", "args": {"query": "DELETE FROM users"}}, "slice": "A"}
+{"prompt": "Schedule 'Lunch with Ali' on 2025-10-03", "history": [], "expected": {"should_refuse": false, "tool": "calendar", "args": {"action": "create", "date": "2025-10-03", "title": "Lunch with Ali"}}, "slice": "A"}

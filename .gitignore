@@ -1,0 +1,34 @@
+# Model artifacts
+models/
+*.gguf
+
+# Training artifacts
+data/training_data.jsonl
+eval_results.json
+
+# llama.cpp build
+llama.cpp/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

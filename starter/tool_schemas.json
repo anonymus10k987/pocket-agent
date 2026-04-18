@@ -1,0 +1,44 @@
+[
+  {
+    "tool": "weather",
+    "description": "Get the current weather for a location.",
+    "args": {
+      "location": {"type": "string", "required": true, "description": "City or place name"},
+      "unit": {"type": "string", "required": true, "enum": ["C", "F"], "description": "Temperature unit"}
+    }
+  },
+  {
+    "tool": "calendar",
+    "description": "List or create calendar events.",
+    "args": {
+      "action": {"type": "string", "required": true, "enum": ["list", "create"], "description": "Action to perform"},
+      "date": {"type": "string", "required": true, "format": "YYYY-MM-DD", "description": "Date for the event"},
+      "title": {"type": "string", "required": false, "description": "Title of the event (required for create)"}
+    }
+  },
+  {
+    "tool": "convert",
+    "description": "Convert a value from one unit to another.",
+    "args": {
+      "value": {"type": "number", "required": true, "description": "The numeric value to convert"},
+      "from_unit": {"type": "string", "required": true, "description": "Source unit"},
+      "to_unit": {"type": "string", "required": true, "description": "Target unit"}
+    }
+  },
+  {
+    "tool": "currency",
+    "description": "Convert an amount from one currency to another.",
+    "args": {
+      "amount": {"type": "number", "required": true, "description": "Amount to convert"},
+      "from": {"type": "string", "required": true, "description": "Source currency ISO 4217 code"},
+      "to": {"type": "string", "required": true, "description": "Target currency ISO 4217 code"}
+    }
+  },
+  {
+    "tool": "sql",
+    "description": "Execute a SQL query against the local database.",
+    "args": {
+      "query": {"type": "string", "required": true, "description": "The SQL query to execute"}
+    }
+  }
+]
